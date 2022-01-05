@@ -15,23 +15,34 @@ Dashboard - Grafana
 ## Nesse desafio deve-se concluir as seguintes tarefas :
 
 ### Manipulação WebServervice no Kubernetes
-- Verifique o kubectl na vm do vagrant
-- Criar um namespace para um webserver com o nome web-ns
-- Fazer de deploy do nginx no namespace web-ns
-- Criar um service e um ingress para o nginx apontando o endereço web.ns.local ( Utilize o que quiser para resolver o nome) 
+- Verifique o kubectl na vm do vagrant.
+- Criar um namespace para um webserver com o nome web-ns.
+- Fazer de deploy do nginx no namespace web-ns.
+- Criar um service e um ingress para o nginx apontando o endereço web.ns.local ( Utilize o que quiser para resolver o nome).
 
 ### Deploy com Jenkins
 - Intale o helm no kubernetes 
-- Faça deploy do jenkins no kubernetes com um helmchart 
-- Habilite amonitoração de metricas prometheus no jenkins
-- Faça deploy do prometheus no Kubernetes
-- faça deploy do grafana no kubernetes
+- Faça deploy do jenkins no kubernetes com um helmchart.
+- Habilite a monitoração de metricas prometheus no jenkins.
+- Faça deploy do prometheus no Kubernetes.
+- faça deploy do grafana no kubernetes.
 
 
 ## Jenkins e Pipelines 
 
-- Crie uma aplicação simples em qualquer linguagem
-- Habilite a coleta de dados com Prometheus 
-- Crie uma pipeline multibranch com jenkins com os branchs dev, stage e prod
-- Coelte as metricas com o prometheus
-- Faça deploy do grafana, conecte no prometheus e crie uma dashboard com os dados dos builds do Jenkins  
+- Crie uma aplicação simples em qualquer linguagem.
+- Habilite a coleta de dados com Prometheus. 
+- Crie uma pipeline multibranch com jenkins com os branchs dev, stage e prod.
+- Colete as metricas com o prometheus.
+- Faça deploy do grafana, conecte o prometheus e crie uma dashboard com os dados dos builds do Jenkins.
+- Teste o processo de continuidade do build com webhook e valide acoleta das metricas.
+
+
+Dados em aberto :
+- Qual aplicação fazer deploy ? 
+  - Qualquer uma, quanto mais simples melhor
+- Quais Metricas coletar ?
+  - Me surpreenda pfvr
+- Como acesso a máquina do varant ?
+  - vagrant ssh k8s 
+
