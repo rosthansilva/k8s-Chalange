@@ -1,3 +1,6 @@
+![Kubernetes](https://i0.wp.com/www.cienciaedados.com/wp-content/uploads/2018/04/Kubernetes-Pods-Nodes-Containers-e-Clusters.png?fit=850%2C440&ssl=1)
+
+
 # k8s-Chalange
 
 pre-req :
