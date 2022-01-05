@@ -29,14 +29,16 @@ seus builds devem ter um padrão de qualidade garantido. Esse padrão deve-se se
 - Faça deploy do jenkins no kubernetes com um helmchart.
 - Habilite a monitoração de metricas prometheus no jenkins.
 - Faça deploy do prometheus no Kubernetes.
-- faça deploy do grafana no kubernetes.
+- Faça deploy do grafana no kubernetes.
 
 
 ## Jenkins e Pipelines 
 
 - Crie uma aplicação simples em qualquer linguagem.
 - Habilite a coleta de dados com Prometheus. 
-- Crie uma pipeline multibranch com jenkins com os branchs dev, stage e prod.
+- Crie uma pipeline que faça CI e CD e que seja uma multibranch pipeline no jenkins. 
+- Crie os branchs dev, stage e prod no git e namespaces de mesmo nome no kubernetes.  
+- Habilite confirmação humana para o deploy no Ns de prod.
 - Colete as metricas com o prometheus.
 - Faça deploy do grafana, conecte o prometheus e crie uma dashboard com os dados dos builds do Jenkins.
 - Teste o processo de continuidade do build com webhook e valide acoleta das metricas.
