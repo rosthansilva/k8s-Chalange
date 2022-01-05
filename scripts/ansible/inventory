@@ -1,0 +1,6 @@
+127.0.0.1 ansible_connection=local
+
+[all:vars]
+ansible_user=vagrant #Com o criamos a VM com o Vagrant, o user é vagrant por padrão
+ansible_python_interpreter=/usr/bin/python3 #O padrão o Ansible é python 2 mas o Ubuntu é PY3
+ansible_ssh_common_args=’-o StrictHostKeyChecking=no’ #Não quero que o SSH verifique a Key

@@ -1,0 +1,68 @@
+---
+- name: Configuração de Docker em Host Debian Buster 
+  hosts: 127.0.0.1
+  connection: local
+  remote_user: vagrant
+  become: yes
+  tasks:
+    - name: TASK 01 - ATUALIZA O INDEX DE PACOTES
+      become: yes
+      apt:
+        name: "*"
+        state: latest
+        update_cache: yes
+        force_apt_get: yes
+    - name: TASK 02 - ATUALIZA SISTEMA OPERACIONAL E INSTALA DEPENDENCIAS
+      become: yes
+      apt:
+        name: "{{ packagesdep }}"
+        force_apt_get: yes
+        state: latest
+        update_cache: yes
+      vars:
+        packagesdep:
+        - git
+        - apt-transport-https
+        - ca-certificates
+        - wget
+        - software-properties-common
+        - gnupg2
+        - curl
+        - python-docker
+    - name: TASK 03 - BAIXA REPOSITÓRIO
+      apt_key:
+        url: https://download.docker.com/linux/debian/gpg
+        state: present
+    - name: TASK 04 - INSTALA REPOSITÓRIO
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/debian stretch stable
+        state: present
+    - name: TASK 04 - LIMPA CACHE DE REPOSITÓRIO
+      become: yes
+      apt:
+        name: "*"
+        state: latest
+        update_cache: yes
+        force_apt_get: yes
+    - name: TASK 05 - INSTALA DOCKER NA MÁQUINA
+      apt:
+        name: "docker-ce"
+        state: latest
+    - name: TASK 06 INSTALA DOCKER COMPOSE NA MÁQUINA
+      get_url:
+        url: https://github.com/docker/compose/releases/download/1.22.0/docker-compose-{{ ansible_system }}-{{ ansible_userspace_architecture }}
+        dest: /usr/local/bin/docker-compose
+        mode: 'u+x,g+x'
+    
+    - name: Instalando Dependencias do Python
+      apt:
+        update_cache: yes
+        state: latest
+        name: python3-pip
+
+    - name: Cria um Link Simbolico 
+      file:
+        src: "/usr/local/bin/docker-compose"
+        dest: "/usr/bin/docker-compose"
+        state: link
+    
