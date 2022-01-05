@@ -1,7 +1,7 @@
 ![Kubernetes](https://i0.wp.com/www.cienciaedados.com/wp-content/uploads/2018/04/Kubernetes-Pods-Nodes-Containers-e-Clusters.png?fit=850%2C440&ssl=1)
 
 
-# k8s-Chalange
+# k8s-Chalange - Desafio de Deploy de Projeto
 
 pre-req :
 ```
@@ -11,10 +11,11 @@ Utilizar monorepo para conseguir criar um ambiente referente a um projeto.
 A empreza xpto tem uma aplicação e quer roda-la no kubernetes, essa aplicação precisa ser monitorada e 
 seus builds devem ter um padrão de qualidade garantido. Esse padrão deve-se ser comprovado com monitoração e métricas de build. A aplicação deve ser em Java ou .net ( Generico, pode somente mostrar um dado no front).
 
-Ci - jenkins
-Monitoração - Prometheus
-Linguagem - Go, Python, .Net ou Java para a aplicação
-Dashboard - Grafana
+- Ci - jenkins
+- Monitoração - Prometheus
+- Linguagem - Go, Python, .Net ou Java para a aplicação
+- Dashboard - Grafana
+
 ## Nesse desafio deve-se concluir as seguintes tarefas :
 
 ### Manipulação WebServervice no Kubernetes
