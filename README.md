@@ -38,7 +38,7 @@ Dashboard - Grafana
 - Teste o processo de continuidade do build com webhook e valide acoleta das metricas.
 
 
-Dados em aberto :
+### Dados em aberto :
 - Qual aplicação fazer deploy ? 
   - Qualquer uma, quanto mais simples melhor
 - Quais Metricas coletar ?
