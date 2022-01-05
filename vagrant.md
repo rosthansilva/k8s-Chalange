@@ -16,6 +16,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 Ou instale o Virtualbox no windows ( https://www.virtualbox.org )
 
 ```
+#Instale no Ubuntu
 apt-get install virtualbox virtualbox—ext–pack -y
 
 ```
@@ -148,7 +149,3 @@ apt-get install virtualbox virtualbox—ext–pack -y
     k8s: [INFO]  systemd: Starting k3s
 
 ```
-4.	API references
-
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
