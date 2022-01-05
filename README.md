@@ -6,6 +6,7 @@
 pre-req :
 ```
 Utilizar monorepo para conseguir criar um ambiente referente a um projeto.
+Subindo vagrant ![Vagrant](https://github.com/rosthansilva/k8s-Chalange/blob/main/vagrant.md)
 ```
 
 A empreza xpto tem uma aplicação e quer roda-la no kubernetes, essa aplicação precisa ser monitorada e 
